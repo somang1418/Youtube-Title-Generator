@@ -1,0 +1,10 @@
+# Youtube-Title-Generator
+
+## Generating Video Titles by LSTM in Python
+
+![](http://www.shivambansal.com/blog/text-lstm/2.png)
+
+<br><br>
+Language Modelling is the core problem for a number of of natural language processing tasks such as speech to text, conversational system, and text summarization. A trained language model learns the likelihood of occurrence of a word based on the previous sequence of words used in the text. Language models can be operated at character level, n-gram level, sentence level or even paragraph level. In this notebook, I will explain how to create a language model for generating natural language text by implement and training state-of-the-art Recurrent Neural Network. Language modelling requires a sequence input data, as given a sequence (of words/tokens) the aim is the predict next word.
+The memory state in RNNs gives an advantage over traditional neural networks but a problem called Vanishing Gradient is associated with them. In this problem, while learning with a large number of layers, it becomes really hard for the network to learn and tune the parameters of the earlier layers. To address this problem, A new type of RNNs called LSTMs (Long Short Term Memory) Models have been developed.
+LSTMs have an additional state called ‘cell state’ through which the network makes adjustments in the information flow. The advantage of this state is that the model can remember or forget the leanings more selectively. To learn more about LSTMs, here is a great post. Lets architecture a LSTM model in our code. I have added total three layers in the model. Input Layer : Takes the sequence of words as input LSTM Layer : Computes the output using LSTM units. I have added 100 units in the layer, but this number can be fine tuned later. Dropout Layer : A regularisation layer which randomly turns-off the activations of some neurons in the LSTM layer. It helps in preventing over fitting. (Optional Layer) Output Layer : Computes the probability of the best possible next word as output We will run this model for total 50 epoochs but it can be experimented further.
