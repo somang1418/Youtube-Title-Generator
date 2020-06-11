@@ -1,4 +1,4 @@
-## Generating Video Titles by LSTM in Python
+## Generating Youtube Video Titles by LSTM 
 
 ![](http://www.shivambansal.com/blog/text-lstm/2.png)
 <br><br>
